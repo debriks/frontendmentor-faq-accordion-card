@@ -1,0 +1,113 @@
+:root {
+  --text-blue: hsl(238, 29%, 16%);
+  --text-dark-blue: hsl(240, 6%, 50%);
+  --text-xt-dark-blue: hsl(237, 12%, 33%);
+  --text-red: hsl(14, 88%, 65%);
+  --gradient-violet: hsl(273, 75%, 66%);
+  --gradient-blue: hsl(240, 73%, 65%);
+  --divider-blue: hsl(240, 5%, 91%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 10rem 1.5rem;
+  font-family: "Kumbh Sans", sans-serif;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    var(--gradient-violet),
+    var(--gradient-blue)
+  );
+}
+
+.card {
+  background-color: white;
+  border-radius: 2rem;
+  max-width: 56rem;
+  background-image: url("images/bg-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center 0%;
+}
+
+.card__box {
+  display: none;
+}
+
+.card__image {
+  position: relative;
+}
+
+.card__image img {
+  position: absolute;
+  top: -6.8rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  max-width: 15rem;
+}
+
+.card__text {
+  padding-top: 13rem;
+}
+
+/* Media Query for Desktop */
+
+@media (min-width: 56em) {
+  /* = 900 pixels */
+
+  .card {
+    position: relative;
+    display: flex;
+    margin: 6rem auto;
+    padding-right: 2rem;
+    background-image: url("images/bg-pattern-desktop.svg");
+    background-size: 45%;
+    background-position: -13% center; /* left horizontaly and centered verticaly */
+  }
+
+  .card__box {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 42%;
+    transform: translate(-50%);
+  }
+
+  .card__image,
+  .card__text {
+    flex: 1;
+    /* making sure the 2 elements will take the same height or width */
+  }
+
+  .card__image {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .card__image img {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 25rem;
+    transform: translateX(-4rem);
+  }
+
+  .card__text {
+    padding-top: 0;
+  }
+}
