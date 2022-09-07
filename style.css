@@ -10,6 +10,8 @@
 
 html {
   box-sizing: border-box;
+  min-height: 100vh;
+  overflow-y: hidden;
 }
 
 *,
@@ -19,10 +21,7 @@ html {
 }
 
 body {
-  margin: 0;
-  padding: 10rem 1.5rem;
   font-family: "Kumbh Sans", sans-serif;
-  min-height: 100vh;
   background-image: linear-gradient(
     var(--gradient-violet),
     var(--gradient-blue)
@@ -40,11 +39,20 @@ h3 {
 /* MOBILE STYLES */
 /* MOBILE STYLES */
 
+.container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow-y: hidden;
+}
+
 .card {
+  position: absolute;
   background-color: white;
   border-radius: 2rem;
-  max-width: 56rem;
-  padding: 2.875rem 1.5rem;
+  padding: 2.875rem 2.5rem;
   background-image: url("images/bg-pattern-mobile.svg");
   background-repeat: no-repeat;
   background-size: 15.4rem;
@@ -58,7 +66,7 @@ h3 {
   top: 7.3rem;
   left: 7.2rem;
   transform: translate(-50%);
-  max-width: 6.25px;
+  max-width: 6.25rem;
 }
 
 .card__image {
@@ -179,11 +187,15 @@ h3 {
   body {
     padding: 8rem;
   }
+
+  .container {
+    transform: translateY(-15%);
+  }
   .card {
     position: relative;
     display: flex;
     margin: 0 auto;
-    padding: 4.375rem 6.25rem 4.375rem 0; /* top right bottom left */
+    padding: 4.375rem 6.25rem 5.2rem 0; /* top right bottom left */
     background-image: url("images/bg-pattern-desktop.svg");
     background-size: 35rem;
     background-position: -65% center; /* left horizontaly and centered verticaly */
@@ -196,10 +208,18 @@ h3 {
     max-width: 10.625rem;
   }
 
-  .card__image,
+  /* .card__image,
   .card__text {
     flex: 1;
-    /* making sure the 2 elements will take the same height or width */
+  } */
+
+  /* .card__text {
+    padding-left: 130px;
+  } */
+
+  .card_text,
+  .accordion__item {
+    max-width: 350px;
   }
 
   .card__text h1 {
@@ -217,7 +237,7 @@ h3 {
     position: relative;
     top: auto;
     left: auto;
-    max-width: 25rem;
+    max-width: 35rem;
     transform: translateX(-4rem);
   }
 
