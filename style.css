@@ -52,7 +52,13 @@ h3 {
 }
 
 .card__box {
-  display: none;
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 7.3rem;
+  left: 7.2rem;
+  transform: translate(-50%);
+  max-width: 6.25px;
 }
 
 .card__image {
@@ -101,6 +107,7 @@ h3 {
   padding: 0.2rem;
   font-size: 0.875rem;
   font-family: "Kumbh Sans", sans-serif;
+  color: var(--text-blue);
   text-align: left;
 }
 
@@ -132,10 +139,16 @@ h3 {
   transform: rotate(180deg);
 }
 
+.accordion__question:hover {
+  color: var(--text-red);
+  cursor: pointer;
+}
+
 .accordion__content {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   line-height: 1.4;
   padding-bottom: 1rem;
+  padding-right: 50px;
 }
 
 .accordion__collapse {
@@ -177,12 +190,10 @@ h3 {
   }
 
   .card__box {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    left: 0;
+    left: 0.3rem;
     top: 42%;
     transform: translate(-50%);
+    max-width: 10.625rem;
   }
 
   .card__image,
