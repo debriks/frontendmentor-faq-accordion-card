@@ -136,6 +136,11 @@ h3 {
   transform: rotate(180deg);
 }
 
+.accordion__question:hover {
+  color: var(--text-red);
+  cursor: pointer;
+}
+
 .accordion__content {
   font-size: 0.75rem;
   line-height: 1.4;
