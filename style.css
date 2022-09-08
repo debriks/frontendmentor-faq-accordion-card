@@ -52,7 +52,11 @@ h3 {
 }
 
 .card__box {
-  display: none;
+  position: absolute;
+  z-index: 1;
+  max-width: 6.5rem;
+  top: 6.8rem;
+  left: 4rem;
 }
 
 .card__image {
