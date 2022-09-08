@@ -63,7 +63,7 @@ document.querySelectorAll(".accordion__question").forEach((item) => {
 //       console.log(accHeight);
 
 //       setTimeout(() => {
-//         accCollapse.style.height = accHeight + "px"; // The element chould have padding and not margin as the padding is included in the final height
+//         accCollapse.style.height = accHeight + "px"; // The element should have padding and not margin as the padding is included in the final height
 //         accCollapse.style.display = "";
 //       }, 1);
 
