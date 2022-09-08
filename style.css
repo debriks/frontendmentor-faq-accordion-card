@@ -178,7 +178,7 @@ h3 {
     padding: 4.375rem 6.25rem 5.5rem 0; /* top right bottom left */
     background-image: url("images/bg-pattern-desktop.svg");
     background-size: 55rem;
-    background-position: bottom -80px left -530px; /* left horizontaly and centered verticaly */
+    background-position: bottom -80px left -495px; /* left horizontaly and centered verticaly */
     max-width: 57.81rem;
   }
 
@@ -187,8 +187,9 @@ h3 {
     position: absolute;
     z-index: 1;
     left: 0;
-    top: 42%;
+    top: 40%;
     transform: translate(-50%);
+    max-width: 15.2rem;
   }
 
   .card__image {
@@ -215,7 +216,7 @@ h3 {
     top: auto;
     left: auto;
     max-width: 35rem;
-    transform: translateX(-4rem);
+    transform: translateX(-5rem);
   }
 
   .card__text {
